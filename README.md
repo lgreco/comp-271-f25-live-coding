@@ -1,1 +1,1 @@
-# Leo's version of GitHub Codespaces ♥️ Jupyter Notebooks
+# Live coding session for COMP 271 Fall 2025
