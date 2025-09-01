@@ -1,14 +1,11 @@
 public class PersonProtected {
     private String name;
-    private int year_born;
+    private int yearBorn;
     private int ssn;
 
     /** Full constructor */
-    public PersonProtected(String name, int year_born) {
+    public PersonProtected(String name, int yearBorn) {
         this.name = name;
-        this.year_born = year_born;
+        this.yearBorn = yearBorn;
     }
-
-    
-
 }

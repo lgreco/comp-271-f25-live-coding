@@ -1,11 +1,11 @@
 public class PersonExposed {
     String name;
-    int year_born;
+    int yearBorn;
     int ssn;
 
     /** Partial constructor */
-    public PersonExposed(String name, int year_born) {
+    public PersonExposed(String name, int yearBorn) {
         this.name = name;
-        this.year_born = year_born;
+        this.yearBorn = yearBorn;
     }
 }
