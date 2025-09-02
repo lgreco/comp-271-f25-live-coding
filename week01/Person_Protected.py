@@ -4,18 +4,20 @@ class Person:
         self.year_born: int = year_born
         self.__ssn: int = -1
 
-    def set_ssn(self, ssn: int) -> None:
+    def set_ssn(nori, ssn: int) -> None:
         """Method to set the SSN. In reality this method will include code that checks
         the authority of the user/program attempting to modify the SSN.
         """
-        self.__ssn = ssn
+        nori.__ssn = ssn
 
-    def get_ssn(self) -> int:
+    def get_ssn(ikura) -> int:
         """Method to return the value of SSN. In practice this method will include logic
         to determine if the program/user requesting access to this field are
         authorized to do so.
         """
-        return self.__ssn
+        return ikura.__ssn
 
 if __name__ == "__main__":
-    pass
+    test = Person("Bob", 1985)
+    test.set_ssn(111223333)
+    print(test.get_ssn())
