@@ -23,6 +23,6 @@ public class PersonProtected {
      * authorized to do so.
      */
     public int getSsn() {
-        return ssn;
+        return this.ssn;
     }
 }
