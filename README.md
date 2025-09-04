@@ -5,3 +5,5 @@
 * [First week](./week00/three_styles.ipynb): Simple coding style. The difference between `for`/`break` and `while` loops.
 
 * [Second week](./week01/objects.ipynb): Basic object stuff. Encapsulation. `self` references. Naive heap.
+
+* [Third week](./week02/more_objects.ipynb): tbd
