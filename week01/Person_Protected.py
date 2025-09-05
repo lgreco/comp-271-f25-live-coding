@@ -40,4 +40,4 @@ if __name__ == "__main__":
     if person1 < person2:
         print(f"{person1} is younger than {person2}")
     else:
-        print(f"{person1} is at least as old as {person1}")
+        print(f"{person1} is at least as old as {person2}")
