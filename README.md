@@ -6,4 +6,4 @@
 
 * [Second week](./week01/objects.ipynb): Objects, Part I. Basic object stuff. Encapsulation. `self` references. Naive heap. Overload special methods. 
 
-* [Third week](./week02/more_objects.ipynb): Objects, Part II. Inheritance, abstract base classes, design by contract.
+* [Third week](./week02/more_objects.ipynb): Objects, Part II. Inheritance, abstract base classes, design by contract. A [Funny Person](./week02/funny_person.ipynb) object.
