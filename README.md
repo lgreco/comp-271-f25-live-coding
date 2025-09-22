@@ -8,6 +8,6 @@
 
 * [Third week](./week02/more_objects.ipynb): Objects, Part II. Inheritance, abstract base classes, design by contract. A [Funny Person](./week02/funny_person.ipynb) object.
 
-[Fourth week](./week03/) Linked lists as stations and trainlines.
+* [Fourth week](./week03/) Linked lists as stations and trainlines.
 
-[Firth week](./week04/XIFO.ipynb) Queues and stacks.
+* [Firth week](./week04/XIFO.ipynb) Queues and stacks.
