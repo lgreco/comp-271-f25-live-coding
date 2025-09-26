@@ -19,9 +19,12 @@ class Queue:
         """Add value to the back of the queue. Return True if successful,
         False if the queue is full.
         """
+        # We can only add if the queue is not full
         success = self._usage < self._capacity
         if success:
+            # Queue is not full, so we can add the value
             self._underlying[self._usage] = value
+            # Increment usage
             self._usage += 1
         return success
 
