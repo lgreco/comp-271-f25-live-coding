@@ -14,8 +14,11 @@ class Queue:
         self._underlying = [None] * self._capacity
 
     # --- Basic functionality ---
-    
+
     def add(self, value: str) -> bool:
+        """Add value to the back of the queue. Return True if successful,
+        False if the queue is full.
+        """
         success = self._usage < self._capacity
         if success:
             self._underlying[self._usage] = value
@@ -23,19 +26,23 @@ class Queue:
         return success
 
     def remove(self):
-        # We can only remove from the front of the queue
+        """Remove and return the value at the front of the queue."""
+        # Whatever is at the front of the queue, we'll return. Even if
+        # the queue is empty, in which case we'll return None.
         removed = self._underlying[0]
+        # If the queue is not empty, we need to shift everything
         if self._usage > 0:
             # shift everything from [1] to [usage-1] one position to the left
             for i in range(1, self._usage):
                 self._underlying[i - 1] = self._underlying[i]
             # make [usage-1] null
-            self._underlying[self._usage-1] = None
+            self._underlying[self._usage - 1] = None
             # decrease usage
             self._usage -= 1
         return removed
- 
+
     # --- accessors ---
+
     def get_capacity(self):
         # encourages programmers from using Queue._usage;
         # instead they should use Queue.get_capacity()
@@ -49,16 +56,14 @@ class Queue:
         return self._usage
 
     def __str__(self):
-        return f"{self._underlying}"
-    
+        return f"Usage/Capacity = {self._usage}/{self._capacity}; {self._underlying}"
+
+
 if __name__ == "__main__":
-    test = Queue(4)
-    print(test)
-    print(test.add("Sam"))
-    print(test.add("Frodo"))
-    print(test.add("Gandalf"))
-    print(test.add("Leo"))
-    print(test.add("Sauron"))
-    print(test)
-    print(test.remove())
-    print(test)
+    characters = ["Sam", "Frodo", "Gandalf", "Legolas", "Gimli"]
+    test_queue = Queue(4)
+    for character in characters:
+        print(f"Attempting to add {character} to the queue. Addition {"completed" if test_queue.add(character) else "failed"}")
+    print(test_queue)
+    while len(test_queue) > 0:
+        print(f"After removing \"{test_queue.remove()}\", queue is {test_queue}")
