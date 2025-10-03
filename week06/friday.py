@@ -1,6 +1,6 @@
 
 
-def remove_element(from_list: list, position: int) -> list:
+def remove_element_by_index(from_list: list, position: int) -> list:
     """Removes an element from a list at the given position."""
     # Create a copy of the original list
     temp = from_list
@@ -20,10 +20,12 @@ def remove_element(from_list: list, position: int) -> list:
                 temp[i - 1] = from_list[i]
     return temp
 
+
+
 # Simple test
 data = ["Frodo", "Sam", "Merry", "Pippin", "Gandalf", "Aragorn", "Legolas", "Gimli"]
 CLEAR_SCREEN = "\033[2J"
 print(CLEAR_SCREEN)
 print(data)
-data = remove_element(data, 3)
+data = remove_element_by_index(data, 3)
 print(data)
