@@ -2,12 +2,18 @@ class SomeFunnyClassWeWroteInClass:
 
     """A simple class to demonstrate __str__ and __repr__ methods. 
     
-    Special method __str__ is used to find the “informal” or nicely printable string representation of an object.
-    This is the method that is called by the built-in str() function and by the print function to compute the string representation of an object.
+    Special method __str__ is used to find the “informal” or nicely 
+    printable string representation of an object. This is the method 
+    that is called by the built-in str() function and by the print 
+    function to compute the string representation of an object.
     
-    On the other hand, __repr__ is used to find the “official” string representation of an object.
-    This is the method that is called by the built-in repr() function and is used for debugging and development.
-    The goal of __repr__ is to be unambiguous and, if possible, match the code necessary to recreate the object.
+    On the other hand, __repr__ is used to find the “official” string 
+    representation of an object. This is the method that is called by 
+    the built-in repr() function and is used for debugging and development.
+    The goal of __repr__ is to be unambiguous and, if possible, match 
+    the code necessary to recreate the object.
+    
+    TYPE HINTS OMITTED FOR BREVITY
     """
 
     def __init__(self, fname, lname):
