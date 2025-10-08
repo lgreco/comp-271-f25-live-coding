@@ -25,6 +25,7 @@ class SomeFunnyClassWeWroteInClass:
     
     def __repr__(self):
         """Nice to have the __repr__ method implemented."""
+        # Return the name of the class and the field names and values.
         return f"{self.__class__.__name__}('{self.fname=}', '{self.lname=}')"
     
 
