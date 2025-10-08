@@ -21,6 +21,8 @@ class SomeFunnyClassWeWroteInClass:
     
     def __str__(self):
         """Always implement the __str__ method."""
+        # Just keep it simple and return the first name using 
+        # the existing accessor method.
         return self.get_fname()
     
     def __repr__(self):
