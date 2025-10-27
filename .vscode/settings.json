@@ -1,7 +1,4 @@
 {
     "python-envs.defaultEnvManager": "ms-python.python:system",
-    "python-envs.pythonProjects": [],
-    "black-formatter.args": [
-        "\"black-formatter.args\" = [\"--line-length 80\", \".\"]"
-    ]
+    "python-envs.pythonProjects": []
 }
