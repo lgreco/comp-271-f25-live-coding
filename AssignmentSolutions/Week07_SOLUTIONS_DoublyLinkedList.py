@@ -99,8 +99,9 @@ class DoublyLinkedList:
             and self.__head.get_prev() == self.__head
             and self.__tail.get_next() == self.__tail
         )
+
     def has_gap_backward(self):
-        """Returns True if there is a gap between the forward and 
+        """Returns True if there is a gap between the forward and
         backward pointers."""
         # Assume there is no gap
         has_gap = False
@@ -111,7 +112,7 @@ class DoublyLinkedList:
             while cursor is not None and cursor.has_next() and not has_gap:
                 # Get the next node
                 next = cursor.get_next()
-                # Check if the next node's previous pointer points back to 
+                # Check if the next node's previous pointer points back to
                 # the current node. If not, we have found a gap
                 has_gap = next.get_prev() != cursor
                 # Move the cursor forward
@@ -145,26 +146,24 @@ class DoublyLinkedList:
         if not self.is_empty():
             # Set the cursor to the start or end based on direction
             cursor = self.__tail if forward else self.__head
-            # Define the direction and opposite functions based on the 
+            # Define the direction and opposite functions based on the
             # traversal direction
             direction = (
                 (lambda node: node.get_prev())
                 if forward
                 else (lambda node: node.get_next())
             )
-            # 
+            #
             opposite = (
                 (lambda node: node.get_next())
                 if forward
                 else (lambda node: node.get_prev())
             )
             # Traverse the list in the specified direction until we find a gap
-            while (cursor is not None 
-                   and direction(cursor) is not None 
-                   and not has_gap):
+            while cursor is not None and direction(cursor) is not None and not has_gap:
                 # Get the next node in the specified direction
                 next = direction(cursor)
-                # Check if the opposite pointer of the next node points 
+                # Check if the opposite pointer of the next node points
                 # back to the current node
                 has_gap = opposite(next) != cursor
                 # Move the cursor in the specified direction
